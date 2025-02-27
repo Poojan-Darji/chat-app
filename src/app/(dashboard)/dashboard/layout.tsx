@@ -65,7 +65,6 @@ const Layout = async ({ children }: LayoutProps) => {
                             friends={friends}
                         />
 
-                        <li>todo</li>
                         <li>
                             <div className="text-xs font-semibold leading-6 text-gray-400">
                                 Overview
@@ -128,7 +127,9 @@ const Layout = async ({ children }: LayoutProps) => {
                     </ul>
                 </nav>
             </div>
-            {children}
+            <aside className="max-h-screen container py-16 md:py-12 w-full">
+                {children}
+            </aside>
         </div>
     );
 };

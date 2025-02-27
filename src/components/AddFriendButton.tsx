@@ -25,9 +25,7 @@ const AddFriendButton = () => {
     const addFriend = async (email: string) => {
         try {
             const validatedEmail = addFriendValidater.parse({ email });
-
             await axios.post("/api/friends/add", { email: validatedEmail });
-
             setShowSuccessState(true);
         } catch (error) {
             if (error instanceof ZodError) {
@@ -38,6 +36,9 @@ const AddFriendButton = () => {
                 setError("email", { message: error.response?.data });
                 return;
             }
+
+            console.log(error);
+
             setError("email", { message: "Something went wrong" });
         }
     };

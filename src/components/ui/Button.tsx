@@ -46,7 +46,7 @@ const Button: FC<ButtonProps> = ({
             {...props}
         >
             {isLoading ? (
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                <Loader2 className="mr-2 self-center h-4 w-4 animate-spin" />
             ) : null}
             {children}
         </button>
